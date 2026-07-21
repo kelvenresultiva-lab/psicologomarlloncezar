@@ -39,7 +39,7 @@ export default function Location() {
 
       <Reveal
         direction="up"
-        className="relative z-10 -mt-[66px] grid grid-cols-1 bg-[#121212] sm:grid-cols-3"
+        className="relative z-10 -mt-[66px] grid grid-cols-1 gap-4 bg-transparent px-4 sm:gap-6 sm:px-6 sm:grid-cols-3"
       >
         {contactItems.map((item) => {
           const Icon = item.icon;
@@ -49,13 +49,13 @@ export default function Location() {
               href={item.href}
               target={item.href.startsWith("http") ? "_blank" : undefined}
               rel={item.href.startsWith("http") ? "noopener noreferrer" : undefined}
-              className="flex flex-col items-center gap-2 border-line/20 px-6 py-10 text-center sm:border-l sm:first:border-l-0"
+              className="flex flex-col items-center gap-2 rounded-xl bg-white px-6 py-10 text-center shadow-lg"
             >
-              <Icon size={30} strokeWidth={1.5} className="text-gold-bright" />
-              <h4 className="mt-3 font-playfair text-lg font-semibold text-gold-bright">
+              <Icon size={30} strokeWidth={1.5} className="text-[#063A5E]" />
+              <h4 className="mt-3 font-playfair text-lg font-semibold text-[#063A5E]">
                 {item.title}
               </h4>
-              <p className="font-heebo text-base text-white">{item.value}</p>
+              <p className="font-heebo text-base text-ink">{item.value}</p>
             </a>
           );
         })}

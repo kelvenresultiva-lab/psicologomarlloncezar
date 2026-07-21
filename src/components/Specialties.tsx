@@ -6,7 +6,7 @@ export default function Specialties() {
   return (
     <section id="especialidades" className="bg-surface pb-20 lg:pb-28">
       <div className="mx-auto max-w-[1140px] sm:px-6">
-        <div className="grid grid-cols-1 gap-0 border-0 border-ink/15 sm:-mt-[140px] sm:grid-cols-3 sm:border">
+        <div className="-mt-8 grid grid-cols-1 gap-0 border-0 border-ink/15 sm:-mt-[140px] sm:grid-cols-3 sm:border">
           {specialties.items.map((item, index) => {
             const Icon = iconMap[item.icon];
             const isFirst = index === 0;
@@ -15,7 +15,7 @@ export default function Specialties() {
                 direction="up"
                 delay={index * 100}
                 key={item.title}
-                className={`border-ink/15 p-10 text-left sm:border-t-0 sm:border-l first:border-l-0 ${
+                className={`border-ink/15 px-10 py-9 text-left sm:border-t-0 sm:border-l first:border-l-0 ${
                   index >= 2 ? "border-t" : ""
                 } ${isFirst ? "bg-gold-bright" : "bg-white"}`}
               >

@@ -5,8 +5,8 @@ import Button from "@/components/Button";
 export default function Footer() {
   return (
     <footer id="contato" className="bg-dark py-16 text-white/70">
-      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-10 px-6 sm:grid-cols-3">
-        <div>
+      <div className="mx-auto grid max-w-[1140px] grid-cols-1 gap-10 px-6 text-center sm:grid-cols-3 sm:text-left">
+        <div className="flex flex-col items-center sm:items-start">
           <h3 className="font-mosseta text-2xl text-white">{site.name}</h3>
           <p className="mt-2 font-lato text-sm uppercase tracking-[1px] text-gold">
             {site.role}
@@ -25,11 +25,11 @@ export default function Footer() {
           </a>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center sm:items-start">
           <h4 className="font-playfair text-lg font-semibold text-white">
             {footer.quickLinksTitle}
           </h4>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col items-center gap-2 sm:items-start">
             {nav.map((item) => (
               <li key={item.href}>
                 <a
@@ -43,7 +43,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="flex flex-col items-center sm:items-start">
           <h4 className="font-playfair text-lg font-semibold text-white">
             {footer.hoursTitle}
           </h4>

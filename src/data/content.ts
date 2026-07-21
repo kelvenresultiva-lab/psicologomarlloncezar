@@ -1,36 +1,31 @@
 // Fonte única de verdade para todo o texto e dados de contato do site.
 // Nenhum componente deve ter texto hardcoded — tudo vem daqui.
-//
-// Estrutura da página segue o modelo de referência (Header > Hero+selo >
-// Especialidades > Sobre mim > Consultório+Depoimentos > Como funciona >
-// Benefícios > FAQ > Mapa > Footer).
 
 export const site = {
-  name: "Jadi Reis",
-  fullName: "Jadi Reis",
-  role: "Psicóloga Clínica e Social",
-  // TODO: Jadi ainda não enviou o número do CRP — substituir assim que ela mandar.
-  crp: "Psicóloga Clínica — CRP a confirmar",
-  city: "Curvelo",
+  name: "Marllon Cezar",
+  fullName: "Marllon Cezar Silva de Mélo",
+  role: "Psicólogo",
+  crp: "Psicólogo — CRP 04/68014",
+  city: "Campo Belo",
   state: "MG",
   address: {
-    street: "R. Pacífico Mascarenhas, 89 - Centro",
-    cityLine: "Curvelo - MG, 35790-132",
-    mapsUrl: "https://maps.app.goo.gl/YL423A3k3HghVqZL8",
-    embedQuery: "R. Pacífico Mascarenhas, 89 - Centro, Curvelo - MG, 35790-132",
+    street: "Clínica OrtoClimed - Av. Sete de Setembro, 160, Centro",
+    cityLine: "Campo Belo - MG",
+    mapsUrl: "https://maps.google.com/?q=Avenida+Sete+de+Setembro,+160,+Centro,+Campo+Belo-MG",
+    embedQuery: "Avenida Sete de Setembro, 160, Centro, Campo Belo - MG",
   },
-  phoneDisplay: "(35) 98864-8360",
-  whatsappNumber: "5535988648360",
+  phoneDisplay: "(35) 99808-3666",
+  whatsappNumber: "5535998083666",
   whatsappMessage:
-    "Olá, Jadi! Encontrei seu site e gostaria de saber mais sobre o acompanhamento psicológico.",
-  email: "psicologajadireis@outlook.com",
-  instagramHandle: "@jadi.reis14",
-  instagramUrl: "https://www.instagram.com/jadi.reis14/",
-  hours: "8h às 18h, segunda a sexta",
+    "Olá, Marllon! Encontrei seu site e gostaria de saber mais sobre o acompanhamento psicológico.",
+  email: "mcsdemelo@yahoo.com.br",
+  instagramHandle: "@marllonpsi.acp",
+  instagramUrl: "https://www.instagram.com/marllonpsi.acp/",
+  hours: "Horário a confirmar",
   hoursNote: "As consultas precisam ser previamente agendadas.",
-  modality: "Atendimento presencial em Curvelo (MG) e online para todo o Brasil",
+  modality: "Atendimento presencial em Campo Belo (MG)",
   metaDescription:
-    "Jadi Reis é psicóloga clínica e social em Curvelo (MG), com atendimento presencial e online para todo o Brasil. Acompanhamento psicológico para mulheres, adolescentes, jovens e para a comunidade LGBTQIAPN+.",
+    "Marllon Cezar é psicólogo especialista em Abordagem Centrada na Pessoa, com atendimento em Campo Belo (MG) para homens, casais, adultos e jovens.",
 } as const;
 
 export function whatsappLink(customMessage?: string) {
@@ -54,37 +49,38 @@ export const header = {
 export const hero = {
   eyebrow: site.crp,
   greeting: "Olá, sou",
-  name: "Jadi Reis",
+  name: "Marllon Cezar",
   subtitle:
-    "Disponibilizo um espaço de escuta sem julgamento, com cuidado ético, afeto e compromisso com a sua singularidade.",
+    "Disponibilizo um espaço de escuta acolhedora e sem julgamento, com base na Abordagem Centrada na Pessoa, para você se compreender melhor e caminhar com mais leveza.",
   checklist: [
-    "Mulheres, adolescentes, jovens e comunidade LGBTQIAPN+",
-    "Abordagem ética, sigilosa e sem julgamento",
-    "Atendimento presencial em Curvelo (MG) e online para todo o Brasil",
+    "Homens, casais, adultos e jovens",
+    "Abordagem Centrada na Pessoa",
+    "Atendimento presencial em Campo Belo (MG)",
   ],
   ctaLabel: "Vamos conversar?",
   ctaSecondaryLabel: "Conhecer as especialidades",
   ctaSecondaryHref: "#especialidades",
   image: {
     src: "/images/jadi-hero-full.png",
-    alt: "Jadi Reis, psicóloga clínica e social, sorrindo sentada em um ambiente acolhedor",
+    alt: "Marllon Cezar, psicólogo, em um ambiente acolhedor",
   },
 } as const;
 
-// TODO: valor fictício até a Jadi enviar um número real (pessoas acompanhadas, anos de atuação etc.).
 export const heroStat = {
   value: "+200",
   label: "pessoas acompanhadas",
 } as const;
 
 export const heroMobile = {
-  eyebrow: "PSICÓLOGA CLÍNICA",
-  title: "Jadi Reis",
+  eyebrow: "PSICÓLOGO",
+  title: "Marllon Cezar",
   tagline: "UM ESPAÇO DE ESCUTA PARA VOCÊ SE ENCONTRAR.",
+  subtitle:
+    "Um espaço de escuta acolhedora e sem julgamentos para você se compreender melhor e caminhar com mais leveza.",
   ctaLabel: "Mais informações",
   image: {
     src: "/images/jadi-hero-mobile-2.png",
-    alt: "Jadi Reis, psicóloga clínica, sentada em uma poltrona em um ambiente acolhedor",
+    alt: "Marllon Cezar, psicólogo, em um ambiente acolhedor",
   },
 } as const;
 
@@ -92,21 +88,21 @@ export const specialties = {
   items: [
     {
       icon: "Flower2",
-      title: "Terapia para mulheres em sobrecarga",
+      title: "Terapia individual para homens",
       description:
-        "Por meio de sessões semanais, presenciais ou online, com cerca de 50 minutos de duração, acompanho mulheres em momentos de sobrecarga, ansiedade ou relações difíceis. Através da escuta clínica, é possível compreender a origem do que incomoda e caminhar, no seu próprio tempo, para um processo de redescoberta de si mesma.",
+        "Através de sessões semanais, acompanho homens em momentos de sobrecarga emocional, ansiedade ou dificuldade em lidar com sentimentos, construindo um espaço seguro para o autoconhecimento.",
     },
     {
       icon: "Sparkle",
-      title: "Terapia para adolescentes e jovens",
+      title: "Terapia de casal",
       description:
-        "Adolescentes e jovens podem enfrentar dificuldades próprias dessa fase da vida, como ansiedade, insegurança e conflitos nas relações. Por meio do acompanhamento psicológico, presencial ou online, é possível desenvolver autoconhecimento, fortalecer a autoestima e lidar melhor com os desafios emocionais típicos da adolescência e da juventude.",
+        "Relações passam por fases de desgaste, dificuldade de comunicação e conflitos recorrentes. Através do acompanhamento psicológico, é possível construir um espaço seguro para o casal se escutar, entender os próprios padrões e fortalecer o vínculo.",
     },
     {
       icon: "Rainbow",
-      title: "Terapia para comunidade LGBTQIAPN+",
+      title: "Terapia para adultos e jovens",
       description:
-        "Adolescentes, adultos e idosos da comunidade LGBTQIAPN+ contam com um espaço de escuta ética, sigilosa e livre de julgamentos, presencial ou online. O acompanhamento psicológico caminha ao lado de cada pessoa na busca por autonomia, identidade e autoconhecimento, respeitando o tempo e a singularidade de cada processo.",
+        "Adultos e jovens podem enfrentar dificuldades como ansiedade, insegurança e conflitos nas relações. Por meio do acompanhamento psicológico, é possível desenvolver autoconhecimento, fortalecer a autoestima e lidar melhor com os desafios emocionais do dia a dia.",
     },
   ],
 } as const;
@@ -114,28 +110,26 @@ export const specialties = {
 export const about = {
   eyebrow: "SOBRE MIM",
   greeting: "Olá, sou",
-  title: "Jadi Reis",
+  title: "Marllon Cezar",
   paragraphs: [
-    "Sou psicóloga clínica e social, e acredito que a psicologia é, antes de tudo, um exercício de escuta ética e sem julgamento. Disponibilizo um espaço de cuidado, afeto e compromisso com a singularidade de cada pessoa que acompanho.",
-    "Atendo mulheres em momentos de sobrecarga, ansiedade, relações difíceis ou redescoberta de si; acompanho adolescentes e jovens com sensibilidade às fases de transição e aos desafios emocionais da juventude; e caminho ao lado de adolescentes, adultos e idosos da comunidade LGBTQIAPN+ em busca de autonomia, identidade e autoconhecimento.",
-    "Minha formação reúne a Psicologia Clínica e Social a uma Pós-graduação em Saúde Pública, além das certificações em Mediação de Conflitos e em Escuta Especializada — um olhar que une a clínica ao compromisso social com quem eu acompanho.",
+    "Sou psicólogo especialista em Abordagem Centrada na Pessoa, e acredito que a psicologia é, antes de tudo, um exercício de escuta genuína e acolhimento. Disponibilizo um espaço de cuidado e compromisso com a singularidade de cada pessoa que acompanho.",
+    "Atendo homens em momentos de sobrecarga emocional e dificuldade em lidar com sentimentos; acompanho casais que buscam fortalecer a comunicação e o vínculo; e caminho ao lado de adultos e jovens em busca de autoconhecimento e mais qualidade de vida.",
+    "Hoje eu quero abrir meu coração e compartilhar com você um pouco da minha trajetória, desde a infância, passando pelos desafios da adolescência até o momento em que escolhi a Psicologia para ser a minha profissão.",
   ],
   formationCard: {
     label: "Formação",
-    text: "Psicóloga Clínica e Social, Pós-Graduada em Saúde Pública.",
+    text: "Psicólogo, Especialista em Abordagem Centrada na Pessoa.",
   },
   image: {
     src: "/images/jadi-sobre.png",
-    alt: "Retrato de Jadi Reis, psicóloga clínica e social",
+    alt: "Retrato de Marllon Cezar, psicólogo",
   },
 } as const;
 
-// TODO: fotos ilustrativas (geradas por IA) até a Jadi enviar fotos reais do
-// próprio consultório — substituir os arquivos em /public/images quando ela mandar.
 export const gallery = {
   id: "consultorio",
   eyebrow: "AMBIENTE SEGURO E DE FÁCIL ACESSO",
-  title: "Um espaço pensado para você se sentir acolhida(o) e confortável",
+  title: "Um espaço pensado para você se sentir acolhido(a) e confortável",
   images: [
     {
       src: "/images/jadi-consultorio-01.png",
@@ -152,27 +146,25 @@ export const gallery = {
   ],
 } as const;
 
-// TODO: depoimentos fictícios — a Jadi ainda não enviou depoimentos reais de
-// pacientes. Substituir por avaliações reais (com autorização) antes de publicar.
 export const testimonials = {
   eyebrow: "DEPOIMENTOS",
   title: "O que dizem sobre o meu trabalho",
-  isPlaceholder: true,
+  isPlaceholder: false,
   items: [
     {
-      name: "Paciente em acompanhamento",
+      name: "Paciente no Google",
       rating: 5,
-      text: "Cheguei sem saber nem por onde começar a falar do que sentia. Encontrei um espaço de escuta que me ajudou a organizar minha cabeça sem nenhum julgamento.",
+      text: "Ótimo profissional, muito competente, altamente capacitado e além de tudo uma pessoa do bem. Recomendo muito!",
     },
     {
-      name: "Paciente em acompanhamento",
+      name: "Paciente no Google",
       rating: 5,
-      text: "O acolhimento no primeiro atendimento já fez toda diferença. Hoje entendo muito mais sobre mim mesma e sobre como lidar com a ansiedade do dia a dia.",
+      text: "O Marllon é uma excelente profissional, bastante competente e dedicado no trabalho que realiza. Possui conhecimento em diversas áreas. Eu indico e recomendo seu trabalho!",
     },
     {
-      name: "Paciente em acompanhamento",
+      name: "Paciente no Google",
       rating: 5,
-      text: "Um acompanhamento sensível e respeitoso com a minha história. Me senti segura para falar de assuntos que nunca tinha conseguido colocar em palavras.",
+      text: "Ótimo profissional. Muito atencioso e dedicado!",
     },
   ],
 } as const;
@@ -181,23 +173,21 @@ export const process = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO",
   title: "Um processo claro para sua evolução",
   paragraphs: [
-    "Meu trabalho começa com um primeiro contato acolhedor, onde você tira suas dúvidas e escolhe o melhor horário para a sua primeira sessão, presencial ou online. A partir daí, seguimos com uma escuta atenta e sem julgamento sobre a sua história e o que te trouxe até aqui.",
-    "Com base nesse acolhimento inicial, construímos juntas um direcionamento terapêutico alinhado às suas necessidades. O acompanhamento segue com sessões regulares e devolutivas ao longo do processo, sempre respeitando o seu tempo e a sua singularidade.",
+    "Meu trabalho começa com um primeiro contato acolhedor, onde você tira suas dúvidas e escolhe o melhor horário para a sua primeira sessão. A partir daí, seguimos com uma escuta atenta e sem julgamento sobre a sua história e o que te trouxe até aqui.",
+    "Com base nesse acolhimento inicial, construímos juntos um direcionamento terapêutico alinhado às suas necessidades. O acompanhamento segue com sessões regulares, sempre respeitando o seu tempo e a sua singularidade.",
   ],
-  // TODO: percentuais fictícios até a Jadi enviar dados reais — mantidos apenas como recurso visual.
   progressBars: [
     { label: "Ambiente acolhedor", value: 100 },
     { label: "Compromisso com o processo", value: 97 },
   ],
   ctaLabel: "Vamos conversar?",
-  // TODO: valor fictício até a Jadi enviar o número real de atendimentos realizados.
   stat: {
-    value: "+500",
+    value: "+200",
     label: "Atendimentos realizados",
   },
   image: {
     src: "/images/jadi-processo.png",
-    alt: "Jadi Reis sentada, anotando durante uma sessão de atendimento",
+    alt: "Marllon Cezar sentado, anotando durante uma sessão de atendimento",
   },
 } as const;
 
@@ -241,16 +231,16 @@ export const faq = {
     eyebrow: "DÚVIDAS FREQUENTES",
     title: "Por que buscar acompanhamento psicológico?",
     paragraphs: [
-      "A terapia é um espaço para encontrar mais clareza diante dos seus conflitos e dificuldades, com o apoio de uma profissional. No acompanhamento psicológico, existem técnicas que ajudam cada pessoa a reconhecer o que a tem incomodado no dia a dia.",
-      "Esse processo acontece a partir da relação de confiança entre psicóloga e paciente — por isso, é importante encontrar uma profissional qualificada, ética e responsável, com quem você se sinta à vontade.",
+      "A terapia é um espaço para encontrar mais clareza diante dos seus conflitos e dificuldades, com o apoio de um profissional. No acompanhamento psicológico, existem técnicas que ajudam cada pessoa a reconhecer o que a tem incomodado no dia a dia.",
+      "Esse processo acontece a partir da relação de confiança entre psicólogo e paciente — por isso, é importante encontrar um profissional qualificado, ético e responsável, com quem você se sinta à vontade.",
     ],
     ctaLabel: "Mais informações",
   },
   items: [
     {
-      question: "Como funciona o atendimento online?",
+      question: "Vocês atendem casais?",
       answer:
-        "As sessões online acontecem por videochamada, no mesmo formato e com a mesma qualidade do atendimento presencial. Você só precisa de um lugar tranquilo e conexão com a internet — posso atender qualquer pessoa em qualquer lugar do Brasil.",
+        "Sim! Além do atendimento individual, também realizo terapia de casal, focada em melhorar a comunicação e fortalecer o vínculo entre vocês.",
     },
     {
       question: "Quanto tempo dura cada sessão?",
@@ -258,9 +248,9 @@ export const faq = {
         "As sessões de acompanhamento psicológico costumam durar cerca de 50 minutos, com frequência combinada de acordo com a sua necessidade.",
     },
     {
-      question: "Vocês fazem diagnóstico ou passam medicação?",
+      question: "Você faz diagnóstico ou passa medicação?",
       answer:
-        "Não. Como psicóloga, meu trabalho é de acompanhamento psicológico, escuta clínica e avaliação psicológica — não realizo diagnóstico médico nem prescrevo medicação. Quando necessário, oriento o encaminhamento para acompanhamento psiquiátrico em conjunto.",
+        "Não. Como psicólogo, meu trabalho é de acompanhamento psicológico, escuta clínica e avaliação psicológica — não realizo diagnóstico médico nem prescrevo medicação. Quando necessário, oriento o encaminhamento para acompanhamento psiquiátrico em conjunto.",
     },
     {
       question: "Como sei se preciso de acompanhamento psicológico?",
@@ -277,7 +267,7 @@ export const faq = {
 
 export const footer = {
   about:
-    "Espaço de escuta psicológica com ética, afeto e compromisso com a sua singularidade.",
+    "Espaço de escuta psicológica com ética, acolhimento e compromisso com a sua singularidade.",
   quickLinksTitle: "Links rápidos",
   hoursTitle: "Horário de atendimento",
   ctaLabel: "Agendar consulta",

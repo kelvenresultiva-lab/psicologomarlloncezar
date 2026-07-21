@@ -5,9 +5,9 @@ const base =
 
 const variants = {
   primary:
-    "border-transparent bg-gold-bright text-white hover:border-gold-bright hover:bg-transparent hover:text-gold-bright",
+    "border-transparent bg-[#E8C078] text-[#063A5E] hover:border-[#E8C078] hover:bg-transparent hover:text-[#E8C078]",
   outline:
-    "border-gold-bright bg-transparent text-ink hover:bg-gold-bright hover:text-white",
+    "border-white bg-transparent text-white hover:bg-white hover:text-ink",
 } as const;
 
 export default function Button({

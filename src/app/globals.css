@@ -5,14 +5,14 @@
      preto quase puro para texto/títulos, dourado fosco para destaques,
      dourado vivo para botões, cinza para corpo de texto, superfícies
      branca / #F2F2F2 alternadas e um rodapé escuro #1A1A1A. */
-  --color-ink: #141414;
-  --color-gold: #b89161;
-  --color-gold-bright: #d3ad64;
-  --color-muted: #7a7a7a;
+  --color-ink: #063a5e;
+  --color-gold: #063a5e;
+  --color-gold-bright: #063a5e;
+  --color-muted: #4d6d84;
   --color-line: #d2d2d2;
   --color-gray: #b0b0b0;
   --color-surface: #f2f2f2;
-  --color-dark: #1a1a1a;
+  --color-dark: #063a5e;
   --gradient-header: linear-gradient(50deg, #b29995 0%, #aeabab 100%);
 }
 

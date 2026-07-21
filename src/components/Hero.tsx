@@ -1,16 +1,16 @@
 import Image from "next/image";
-import { CheckCircle2, Flower2 } from "lucide-react";
+import { Brain, Users, User, MapPin, ArrowRight } from "lucide-react";
 import { hero, heroMobile, whatsappLink } from "@/data/content";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
 
+const checklistIcons = [Users, User, MapPin];
+const mobileOrder = [1, 2, 0]; // Abordagem, Atendimento, Homens/casais — igual à referência
+
 export default function Hero() {
   return (
     <section id="hero" className="relative isolate overflow-hidden">
-      {/* Mobile / tablet: foto de corpo inteiro com o texto sobreposto na faixa
-          clara inferior. O fundo #F9F3EE é a cor para a qual a própria imagem
-          esmaece, então a emenda entre foto e seção fica invisível. */}
-      <div className="bg-[#F9F3EE] lg:hidden">
+      <div className="bg-[#063A5E] lg:hidden">
         <Image
           src={heroMobile.image.src}
           alt={heroMobile.image.alt}
@@ -20,38 +20,59 @@ export default function Hero() {
           sizes="100vw"
           className="h-auto w-full"
         />
-
-        {/* -30% da largura sobe o texto até ~83% da altura da foto, já na área
-            esmaecida; como a margem é proporcional à largura (assim como a
-            altura da imagem), o alinhamento se mantém em qualquer tela. */}
         <Reveal
           direction="up"
-          className="relative -mt-[30%] px-6 pb-14 text-center"
+          className="relative -mt-[129%] flex flex-col gap-6 px-6 pb-29"
         >
-          <p className="font-lato text-[13px] font-semibold uppercase tracking-[2.3px] text-muted">
-            {heroMobile.eyebrow}
-          </p>
-          <h1 className="mt-3 font-playfair text-4xl font-semibold text-ink">
-            {heroMobile.title}
-          </h1>
-
-          <div className="mx-auto mt-5 flex w-full max-w-[220px] items-center justify-center gap-3">
-            <span className="h-px flex-1 bg-gold-bright/40" />
-            <Flower2 size={18} className="shrink-0 text-gold-bright" />
-            <span className="h-px flex-1 bg-gold-bright/40" />
+          <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-4 py-2 font-lato text-[11px] font-semibold uppercase tracking-[1.3px] text-white">
+            {heroMobile.eyebrow} &middot; {hero.eyebrow.replace("Psicólogo — ", "")}
           </div>
 
-          <p className="mx-auto mt-5 max-w-xs font-heebo text-sm font-medium uppercase tracking-[1.5px] text-ink/80">
-            {heroMobile.tagline}
+          <div>
+            <p className="font-mosseta text-2xl text-white">{hero.greeting}</p>
+            <h1 className="font-mosseta text-5xl leading-[1.05] text-[#E8C078]">
+              {heroMobile.title}
+            </h1>
+            <span className="mt-3 block h-[3px] w-14 bg-[#E8C078]" />
+          </div>
+
+          <p className="max-w-xs font-heebo text-base font-normal leading-relaxed text-white">
+            {heroMobile.subtitle}
           </p>
 
-          <div className="mt-7 flex justify-center">
-            <Button href={whatsappLink()}>{heroMobile.ctaLabel}</Button>
+          <div className="flex items-start justify-between">
+            {mobileOrder.map((i, pos) => {
+              const item = hero.checklist[i];
+              const Icon = checklistIcons[i];
+              return (
+                <div
+                  key={item}
+                  className={`flex flex-1 flex-col items-center gap-2 text-center ${
+                    pos > 0 ? "border-l border-white/20 pl-2" : ""
+                  }`}
+                >
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full border border-[#E8C078]/60 text-[#E8C078]">
+                    <Icon size={20} strokeWidth={1.5} />
+                  </span>
+                  <span className="font-heebo text-[13px] font-medium leading-tight text-white">
+                    {item}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+
+          <div className="mt-2 flex flex-col gap-3">
+            <Button
+              href={whatsappLink()}
+              icon={<ArrowRight size={18} />}
+              className="!w-full !justify-between"
+            >
+              {heroMobile.ctaLabel}
+            </Button>
           </div>
         </Reveal>
       </div>
-
-      {/* Desktop: foto de fundo em tela cheia com texto sobreposto. */}
       <div className="relative hidden bg-white lg:block">
         <div className="absolute inset-0">
           <Image
@@ -63,47 +84,70 @@ export default function Hero() {
             className="object-cover object-[75%_30%]"
           />
         </div>
-
         <div className="relative mx-auto flex max-w-[1140px] flex-col gap-6 px-6 pb-[380px] pt-28">
           <Reveal direction="up">
-            <p className="font-lato text-[15px] font-semibold uppercase tracking-[2.3px] text-gold">
+            <div className="inline-flex w-fit items-center gap-2 rounded-full border border-white/30 px-5 py-2 font-playfair text-[13px] font-semibold uppercase tracking-[1.5px] text-white">
+              <Brain size={16} />
               {hero.eyebrow}
-            </p>
+            </div>
           </Reveal>
 
           <Reveal direction="up" delay={100}>
-            <h1 className="max-w-2xl font-mosseta text-[56px] leading-[1.15] text-ink">
-              {hero.greeting} <span className="text-gold-bright">{hero.name}</span>
-            </h1>
+            <div>
+              <p className="font-playfair text-[32px] italic text-white">
+                {hero.greeting}
+              </p>
+              <h1 className="font-mosseta text-[64px] leading-[1.05] text-[#E8C078]">
+                {hero.name}
+              </h1>
+              <span className="mt-4 block h-[3px] w-16 bg-[#E8C078]" />
+            </div>
           </Reveal>
 
           <Reveal direction="up" delay={200}>
-            <p className="max-w-md font-heebo text-base font-normal leading-relaxed text-ink">
+            <p className="max-w-lg font-playfair text-lg font-medium leading-relaxed text-white">
               {hero.subtitle}
             </p>
           </Reveal>
 
           <Reveal direction="up" delay={300}>
-            <ul className="flex flex-col gap-3">
-              {hero.checklist.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={18}
-                    className="mt-0.5 shrink-0 text-gold-bright"
-                  />
-                  <span className="font-heebo text-[15px] font-medium text-ink">
-                    {item}
-                  </span>
-                </li>
-              ))}
-            </ul>
+            <div className="mt-2 flex flex-wrap items-start gap-8">
+              {hero.checklist.map((item, index) => {
+                const Icon = checklistIcons[index] ?? Users;
+                return (
+                  <div
+                    key={item}
+                    className={`flex max-w-[150px] flex-col items-center gap-2 text-center ${
+                      index > 0 ? "border-l border-white/20 pl-8" : ""
+                    }`}
+                  >
+                    <span className="flex h-12 w-12 items-center justify-center rounded-full border border-[#E8C078]/60 text-[#E8C078]">
+                      <Icon size={22} strokeWidth={1.5} />
+                    </span>
+                    <span className="font-playfair text-sm font-medium text-white">
+                      {item}
+                    </span>
+                  </div>
+                );
+              })}
+            </div>
           </Reveal>
 
-          <Reveal direction="up" delay={400} className="flex flex-wrap gap-4">
-            <Button href={whatsappLink()} variant="outline">
+          <Reveal
+            direction="up"
+            delay={400}
+            className="mt-4 flex flex-wrap gap-4"
+          >
+            <Button href={whatsappLink()} icon={<ArrowRight size={18} />}>
               {hero.ctaLabel}
             </Button>
-            <Button href={hero.ctaSecondaryHref}>{hero.ctaSecondaryLabel}</Button>
+            <Button
+              href={hero.ctaSecondaryHref}
+              variant="outline"
+              icon={<ArrowRight size={18} />}
+            >
+              {hero.ctaSecondaryLabel}
+            </Button>
           </Reveal>
         </div>
       </div>
