@@ -66,7 +66,7 @@ export default function Hero() {
             <Button
               href={whatsappLink()}
               icon={<ArrowRight size={18} />}
-              className="!w-full !justify-between"
+              className="!mx-auto !w-auto !justify-center !px-10"
             >
               {heroMobile.ctaLabel}
             </Button>

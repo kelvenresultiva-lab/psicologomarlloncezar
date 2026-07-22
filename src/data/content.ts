@@ -23,7 +23,7 @@ export const site = {
   instagramUrl: "https://www.instagram.com/marllonpsi.acp/",
   hours: "Horário a confirmar",
   hoursNote: "As consultas precisam ser previamente agendadas.",
-  modality: "Atendimento presencial em Campo Belo (MG)",
+  modality: "Presencial em Campo Belo (MG)",
   metaDescription:
     "Marllon Cezar é psicólogo especialista em Abordagem Centrada na Pessoa, com atendimento em Campo Belo (MG) para homens, casais, adultos e jovens.",
 } as const;
