@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: `${site.name} | Psicólogo Clínico em ${site.city}`,
     description: site.metaDescription,
-    images: ["/images/logo-marllon.png"],
+    images: ["/images/og-image-marllon.png"],
   },
 };
 
