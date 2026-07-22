@@ -1,5 +1,4 @@
 "use client";
-
 import { useRef, useState, type ReactNode } from "react";
 
 export default function DragScroll({
@@ -14,6 +13,8 @@ export default function DragScroll({
   const drag = useRef({ active: false, startX: 0, scrollLeft: 0, moved: false });
 
   const onPointerDown = (e: React.PointerEvent) => {
+    // Só ativa o arraste manual para mouse. Toque usa o scroll nativo do navegador.
+    if (e.pointerType !== "mouse") return;
     const el = ref.current;
     if (!el) return;
     drag.current = {
@@ -57,9 +58,10 @@ export default function DragScroll({
           e.stopPropagation();
         }
       }}
-      className={`scrollbar-none flex overflow-x-auto touch-pan-y ${
+      className={`scrollbar-none flex overflow-x-auto ${
         isDragging ? "cursor-grabbing select-none" : "cursor-grab"
       } ${className}`}
+      style={{ touchAction: "pan-x" }}
     >
       {children}
     </div>
