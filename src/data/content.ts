@@ -55,7 +55,7 @@ export const hero = {
   checklist: [
     "Homens, casais, adultos e jovens",
     "Abordagem Centrada na Pessoa",
-    "Atendimento presencial em Campo Belo (MG)",
+    "Presencial em Campo Belo (MG)",
   ],
   ctaLabel: "Vamos conversar?",
   ctaSecondaryLabel: "Conhecer as especialidades",
