@@ -1,22 +1,32 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { header, nav, site, whatsappLink } from "@/data/content";
 import Button from "@/components/Button";
-
 export default function Header() {
+
   const [open, setOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 bg-white">
       <div className="mx-auto flex max-w-[1140px] items-center justify-between px-6 py-4">
-        <a
-          href="#hero"
-          className="font-mosseta text-2xl text-ink"
-          style={{ letterSpacing: "1.1px" }}
-        >
-          {site.name}
+        <a href="#hero" className="flex items-center gap-2">
+          <Image
+            src="/images/logo-marllon.png"
+            alt={site.name}
+            width={40}
+            height={50}
+            className="h-10 w-auto"
+            priority
+          />
+          <span
+            className="font-mosseta text-2xl text-ink"
+            style={{ letterSpacing: "1.1px" }}
+          >
+            {site.name}
+          </span>
         </a>
 
         <nav className="hidden items-center gap-7 lg:flex">

@@ -33,8 +33,16 @@ const heebo = Heebo({
 });
 
 export const metadata: Metadata = {
-  title: `${site.name} | Psicóloga Clínica em ${site.city}`,
+  title: `${site.name} | Psicólogo Clínico em ${site.city}`,
   description: site.metaDescription,
+  icons: {
+    icon: "/images/logo-marllon.png",
+  },
+  openGraph: {
+    title: `${site.name} | Psicólogo Clínico em ${site.city}`,
+    description: site.metaDescription,
+    images: ["/images/logo-marllon.png"],
+  },
 };
 
 export default function RootLayout({
